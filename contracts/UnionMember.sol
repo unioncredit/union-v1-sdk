@@ -62,65 +62,65 @@ contract UnionMember {
     }
 
     //become a member
-    function registerMember() public virtual {
+    function _registerMember() internal {
         uint256 newMemberFee = userManager.newMemberFee();
         unionToken.approve(address(userManager), newMemberFee);
         userManager.registerMember(address(this));
     }
 
     // update trust for account
-    function updateTrust(address account, uint256 amount) public virtual {
+    function _updateTrust(address account, uint256 amount) internal {
         userManager.updateTrust(account, amount);
     }
 
     // stop vouch for other member
-    function cancelVouch(address staker, address borrower) public virtual {
+    function _cancelVouch(address staker, address borrower) internal {
         userManager.cancelVouch(staker, borrower);
     }
 
-    function stake(uint256 amount) public virtual {
+    function _stake(uint256 amount) internal {
         token.approve(address(userManager), amount);
         userManager.stake(amount);
     }
 
-    function unstake(uint256 amount) public virtual {
+    function _unstake(uint256 amount) internal {
         userManager.unstake(amount);
     }
 
-    function withdrawRewards() public virtual {
+    function _withdrawRewards() internal {
         userManager.withdrawRewards();
     }
     
-    function debtWriteOff(address borrower, uint256 amount) public virtual {
+    function _debtWriteOff(address borrower, uint256 amount) internal {
         userManager.debtWriteOff(borrower, amount);
     }
     
-    function borrow(uint256 amount) public virtual {
+    function _borrow(uint256 amount) internal {
         uToken.borrow(amount);
     }
 
-    function repayBorrow(uint256 amount) public virtual {
+    function _repayBorrow(uint256 amount) internal {
         token.approve(address(uToken), amount);
         uToken.repayBorrow(amount);
     }
 
-    function repayBorrowBehalf(address account, uint256 amount) public virtual {
+    function _repayBorrowBehalf(address account, uint256 amount) internal {
         token.approve(address(uToken), amount);
         uToken.repayBorrowBehalf(account, amount);
     }
     
-    function mint(uint256 amount) public virtual {
+    function _mint(uint256 amount) internal {
         token.approve(address(uToken), amount);
         uToken.mint(amount);
     }
     
     // sender redeems uTokens in exchange for the underlying asset
-    function redeem(uint256 amount) public virtual {
+    function _redeem(uint256 amount) internal {
         uToken.redeem(amount);
     }
 
     // sender redeems uTokens in exchange for a specified amount of underlying asset
-    function redeemUnderlying(uint256 amount) public virtual {
+    function _redeemUnderlying(uint256 amount) internal {
         uToken.redeemUnderlying(amount);
     }   
 }
