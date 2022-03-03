@@ -2,7 +2,9 @@
   "name": "@unioncredit/union-v1-sdk",
   "version": "1.0.0",
   "description": "",
-  "scripts": {},
+  "scripts": {
+    "compile": "yarn hardhat compile"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/unioncredit/union-v1-sdk.git"
@@ -13,6 +15,8 @@
     "@nomiclabs/hardhat-ethers": "^2.0.5",
     "@nomiclabs/hardhat-waffle": "^2.0.3",
     "@openzeppelin/contracts": "^4.5.0",
-    "hardhat": "^2.9.0"
+    "dotenv": "^16.0.0",
+    "hardhat": "^2.9.0",
+    "hardhat-deploy": "^0.10.5"
   }
 }
