@@ -164,4 +164,6 @@ interface IUToken {
      *  @param amount WriteOff amount
      */
     function debtWriteOff(address borrower, uint256 amount) external;
+
+    function balanceOf(address account) external view returns (uint256);
 }

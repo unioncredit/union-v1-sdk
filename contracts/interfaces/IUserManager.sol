@@ -175,4 +175,6 @@ interface IUserManager {
     ) external;
 
     function debtWriteOff(address borrower, uint256 amount) external;
+
+    function getVouchingAmount(address staker, address borrower) external view returns (uint256);    
 }

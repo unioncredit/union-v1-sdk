@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "compile": "yarn hardhat compile"
+    "compile": "yarn hardhat compile",
+    "test": "yarn hardhat test"
   },
   "repository": {
     "type": "git",
@@ -18,5 +19,9 @@
     "dotenv": "^16.0.0",
     "hardhat": "^2.9.0",
     "hardhat-deploy": "^0.10.5"
+  },
+  "devDependencies": {
+    "chai": "^4.3.6",
+    "ethers": "^5.5.4"
   }
 }
