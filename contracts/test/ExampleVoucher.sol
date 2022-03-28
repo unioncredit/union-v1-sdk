@@ -5,7 +5,7 @@ import "@openzeppelin/contracts/access/Ownable.sol";
 import "../UnionVoucher.sol";
 
 contract ExampleVoucher is Ownable, UnionVoucher{
-    constructor(address marketRegistry, address unionToken, address token) UnionVoucher(marketRegistry,unionToken,token) {
+    constructor(address marketRegistry, address unionToken, address token) BaseUnionMember(marketRegistry,unionToken,token) {
      
     }
 

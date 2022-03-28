@@ -6,11 +6,7 @@ import "./interfaces/IMarketRegistry.sol";
 import "./interfaces/IUserManager.sol";
 import "./BaseUnionMember.sol";
 
-contract UnionVoucher is BaseUnionMember{
-    constructor(address _marketRegistry, address _unionToken, address _underlyingToken) BaseUnionMember(_marketRegistry,_unionToken,_underlyingToken){
- 
-    }
-
+abstract contract UnionVoucher is BaseUnionMember{
     function getBorrowerAddresses() public view returns (address[] memory) {
         return userManager.getBorrowerAddresses(address(this));
     }

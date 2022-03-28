@@ -7,11 +7,7 @@ import "./interfaces/IUserManager.sol";
 import "./interfaces/IUToken.sol";
 import "./BaseUnionMember.sol";
 
-contract UnionBorrower is BaseUnionMember {
-    constructor(address _marketRegistry, address _unionToken, address _underlyingToken) BaseUnionMember(_marketRegistry,_unionToken,_underlyingToken) {
- 
-    }
-
+abstract contract UnionBorrower is BaseUnionMember {
     function getStakerAddresses() public view returns (address[] memory) {
         return userManager.getStakerAddresses(address(this));
     }

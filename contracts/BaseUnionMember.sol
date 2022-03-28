@@ -6,7 +6,7 @@ import "./interfaces/IMarketRegistry.sol";
 import "./interfaces/IUserManager.sol";
 import "./interfaces/IUToken.sol";
 
-contract BaseUnionMember {
+abstract contract BaseUnionMember {
     IMarketRegistry public immutable marketRegistry;
     IUserManager public immutable userManager;
     IUToken public immutable uToken;
