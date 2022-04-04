@@ -1,7 +1,7 @@
 {
   "name": "@unioncredit/union-v1-sdk",
   "version": "1.0.0",
-  "description": "",
+  "description": "A library to help developers to easily build their own contracts to interact with Union protocol.",
   "scripts": {
     "compile": "yarn hardhat compile",
     "test": "yarn hardhat test"
@@ -11,7 +11,7 @@
     "url": "git+https://github.com/unioncredit/union-v1-sdk.git"
   },
   "author": "twygod <twygod@gmail.com>",
-  "license": "UNLICENSED",
+  "license": "MIT",
   "dependencies": {
     "@nomiclabs/hardhat-ethers": "^2.0.5",
     "@nomiclabs/hardhat-waffle": "^2.0.3",
