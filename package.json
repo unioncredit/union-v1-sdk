@@ -1,5 +1,5 @@
 {
-  "name": "@unioncredit/union-v1-sdk",
+  "name": "@unioncredit/v1-sdk",
   "version": "1.0.0",
   "description": "A library to help developers to easily build their own contracts to interact with Union protocol.",
   "scripts": {
