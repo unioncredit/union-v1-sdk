@@ -1,5 +1,7 @@
 # Union SDK
 
+[![npm version](https://badge.fury.io/js/@unioncredit%2Fv1-sdk.svg)](https://badge.fury.io/js/@unioncredit%2Fv1-sdk)
+
 A library to help developers build own contracts that interact with [Union protocol](https://union.finance).
 
 ## Structure
