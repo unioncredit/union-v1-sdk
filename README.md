@@ -19,7 +19,7 @@ npm install @unioncredit/v1-sdk
 ### Imports
 
 ```solidity
-import "@unioncredit/v1-sdk/contracts/UnionMember.sol";
+import "@unioncredit/v1-sdk/contracts/BaseUnionMember.sol";
 import "@unioncredit/v1-sdk/contracts/UnionVoucher.sol";
 import "@unioncredit/v1-sdk/contracts/UnionBorrower.sol";
 ```
@@ -80,7 +80,7 @@ import "@unioncredit/v1-sdk/contracts/UnionVoucher.sol";
 /**
  * @notice A UnionMember that vouches for holders of frankfrank
  */
-contract SqueethWithFriends is UnionBorrower {
+contract FrankFrankFriends is UnionVoucher {
   uint256 public vouchAmount;
   IERC721 public frank;
   
